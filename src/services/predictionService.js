@@ -4,7 +4,7 @@
  * Connected to the FastAPI backend at POST /predict.
  * To change the backend URL, update API_BASE_URL below.
  */
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = import.meta.env.API_URL;
 const API_BASE_URL=apiUrl; 
 
 // ─── Field value mappings (internal form → backend expectation) ───────────────
