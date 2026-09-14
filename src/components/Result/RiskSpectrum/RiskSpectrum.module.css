@@ -1,0 +1,100 @@
+.spectrum {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  animation: fadeUp 0.5s 0.8s var(--ease-out) both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-3);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-widest);
+  color: var(--text-tertiary);
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.track {
+  position: relative;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-overlay);
+  margin-bottom: var(--space-3);
+  overflow: visible;
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    to right,
+    var(--success) 0%,
+    var(--warning) 50%,
+    var(--danger) 100%
+  );
+  opacity: 0.6;
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  left: 0;
+  transition: left 0.01s;
+}
+
+.markerDot {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 2.5px solid var(--text-primary);
+  box-shadow: 0 0 0 3px var(--bg-base);
+}
+
+.markerLabel {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-primary);
+  white-space: nowrap;
+  background: var(--bg-surface);
+  padding: 1px 4px;
+  border-radius: var(--radius-xs);
+  margin-top: 12px;
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+}
+
+.legendLow, .legendMod, .legendHigh {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+}
+.legendLow  { color: var(--success-text); }
+.legendMod  { color: var(--warning-text); }
+.legendHigh { color: var(--danger-text); }

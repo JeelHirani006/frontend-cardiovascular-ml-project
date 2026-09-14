@@ -1,0 +1,23 @@
+/* App-level layout styles */
+.app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content {
+  flex: 1;
+}
+
+/* Smooth status transitions */
+[data-status="assessing"] #main-content,
+[data-status="loading"] #main-content,
+[data-status="result"] #main-content,
+[data-status="error"] #main-content {
+  animation: screenEnter 0.4s var(--ease-out) both;
+}
+
+@keyframes screenEnter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

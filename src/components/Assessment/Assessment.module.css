@@ -1,0 +1,22 @@
+.assessment {
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px var(--space-6) var(--space-16);
+}
+
+.inner {
+  width: 100%;
+  max-width: 640px;
+  padding-top: var(--space-12);
+}
+
+.stepWrap {
+  animation: stepTransition 0.3s var(--ease-out) both;
+}
+
+@keyframes stepTransition {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
